@@ -9,7 +9,7 @@ module.exports = async function globalTeardown() {
     const docker = new Docker();
     const mongoContainer = await getContainer('some-mongo')(docker);
     if (mongoContainer) {
-      await stopAndRemoveContainer('some-mongo')(docker);
+      await stopAndRemoveContainer(mongoContainer['container id'])(docker);
     }
   } catch (error) {
     console.log(error); // eslint-disable-line no-console
