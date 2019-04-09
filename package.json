@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon --exec babel-node src/index.js",
-    "start": "nodemon --exec babel-node src/index.js",
-    "test": "NODE_ENV=test env-cmd --no-override .env jest"
+    "start": "babel-node src/index.js",
+    "test": "NODE_ENV=test env-cmd --no-override .env jest --runInBand --verbose"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
