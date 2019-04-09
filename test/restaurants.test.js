@@ -3,9 +3,9 @@ import app from '../src/app';
 import helpers from './helpers';
 
 describe('GET /restaurants/:state', () => {
-  beforeAll(helpers.beforeAll);
+  beforeAll(helpers.beforeAll, 30000);
 
-  afterAll(helpers.afterAll);
+  afterAll(helpers.afterAll, 30000);
 
   test('should return 400 if state with 1 char', (done) => {
     request
